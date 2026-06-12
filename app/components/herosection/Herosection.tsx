@@ -8,7 +8,7 @@ const Herosection = () => {
         <h2 className="text-5xl font-bold">
           Welcome to
           <br />
-          <span className="text-2xl font-medium text-blue-900">
+          <span className="text-2xl font-medium text-blue-700">
             Health Management System
           </span>
         </h2>
