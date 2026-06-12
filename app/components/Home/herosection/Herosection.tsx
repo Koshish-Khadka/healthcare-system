@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import React from "react";
+import Link from "next/link";
 
 const Herosection = () => {
   return (
@@ -20,8 +20,16 @@ const Herosection = () => {
         </p>
       </div>
       <div className="flex flex-col md:flex-row gap-4">
-        <Button variant={"default"} className="px-3 py-5">New Patient </Button>
-        <Button variant={"link"} className="px-3 py-5 border border-">Login to account</Button>
+        <Link href={"/sign-up"}>
+          <Button variant={"default"} className="px-3 py-5">
+            New Patient{" "}
+          </Button>
+        </Link>
+        <Link href={"/sign-in"}>
+          <Button variant={"link"} className="px-3 py-5 border border-">
+            Login to account
+          </Button>
+        </Link>
       </div>
     </div>
   );

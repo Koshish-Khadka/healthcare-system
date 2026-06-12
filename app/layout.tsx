@@ -3,6 +3,9 @@ import "./globals.css";
 import { Geist } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme-provider";
+import {
+  ClerkProvider,
+} from "@clerk/nextjs";
 
 const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -24,14 +27,16 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         {" "}
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
+        <ClerkProvider>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            {children}
+          </ThemeProvider>
+        </ClerkProvider>
       </body>
     </html>
   );
