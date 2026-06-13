@@ -1,17 +1,8 @@
 import AppointmentTable from "@/app/components/Dashboard/appointment/AppointmentTable";
 import { AppointmentChart } from "@/app/components/Dashboard/charts/AppointmentChart";
+import DashCard from "@/app/components/Dashboard/DashCard";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import {
-  Briefcase,
-  BriefcaseBusiness,
-  BriefcaseMedical,
-  LucideIcon,
-} from "lucide-react";
-
-const CardIcon = ({ icon: Icon }: { icon: LucideIcon }) => {
-  return <Icon />;
-};
+import { Briefcase, BriefcaseBusiness, BriefcaseMedical } from "lucide-react";
 
 const PatientDashboard = () => {
   const cardItems = [
@@ -93,20 +84,7 @@ const PatientDashboard = () => {
           {/* Cards */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
             {cardItems.map((items) => (
-              <Card key={items.id} className="p-4 rounded-md">
-                <CardHeader>
-                  <h3>{items.title}</h3>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex items-center gap-4 ">
-                    <CardIcon icon={items.icon} />
-                    <h2 className="text-2xl 2xl:text-3xl font-semibold">
-                      {items.number}
-                    </h2>
-                  </div>
-                  <p className="text-[11px] text-center mt-5">{items.desc}</p>
-                </CardContent>
-              </Card>
+              <DashCard data={items} key={items.id} />
             ))}
           </div>
         </div>

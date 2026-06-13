@@ -6,20 +6,18 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-
-const AppointmentTable = () => {
+const MedicalHistory = () => {
   return (
     <div className="mt-6">
       <Table>
         <TableCaption>No appointments found.</TableCaption>
         <TableHeader>
           <TableRow>
-            <TableHead className="">INFO</TableHead>
-            <TableHead>DATE</TableHead>
-            <TableHead>TIME</TableHead>
+            <TableHead className="">NO</TableHead>
+            <TableHead>DATE & TIME</TableHead>
             <TableHead>DOCTOR</TableHead>
-            <TableHead>STATUS</TableHead>
-            <TableHead className="text-right">ACTIONS</TableHead>
+            <TableHead>DIAGNOSIS</TableHead>
+            <TableHead>LAB TEST</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody></TableBody>
@@ -28,4 +26,4 @@ const AppointmentTable = () => {
   );
 };
 
-export default AppointmentTable;
+export default MedicalHistory;
