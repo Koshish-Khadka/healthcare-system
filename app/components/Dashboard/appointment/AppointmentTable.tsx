@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Table,
   TableBody,
@@ -7,7 +9,9 @@ import {
   TableRow,
 } from "@/components/ui/table";
 
+
 const AppointmentTable = () => {
+ 
   return (
     <div className="mt-6">
       <Table>
